@@ -1,131 +1,78 @@
+# Exploratory Data Analysis (EDA) Projects Portfolio
 
-# EuroMart Sales Analysis  
+A collection of my data analysis projects showcasing exploratory data analysis, statistical insights, and business intelligence using Python.
 
-![Python](https://img.shields.io/badge/python-3.9-blue)  
-![License](https://img.shields.io/badge/license-MIT-green)  
+## 📊 Projects
 
-## 📑 Table of Contents  
-1. [Project Overview](#-project-overview)  
-2. [Dataset Information](#-dataset-information)  
-3. [Data Processing & Feature Engineering](#-data-processing--feature-engineering)  
-4. [Key Business Insights](#-key-business-insights)  
-5. [Recommendations](#-recommendations)  
-6. [Technical Implementation](#-technical-implementation)  
-7. [Future Work](#-future-work)  
-8. [How to Run](#-how-to-run)  
+### [Car Price Analysis](Car-Price-Analysis/)
+**Description:** An in-depth Exploratory Data Analysis on used cars dataset to understand factors influencing car prices in the Indian market.
 
----
+**Key Insights:**
+- **Price Range:** ₹0.44L - ₹160L (average ₹9.48L)
+- **Most Popular Brand:** Maruti (1,444 listings)
+- **Top Location:** Mumbai (948 listings)
+- **Fuel Preference:** Diesel dominates the used car market
+- **Key Finding:** Manual transmission preferred (90% of listings)
 
-## 📊 Project Overview  
-This project analyzes **EuroMart’s sales data (2011–2014)** to uncover business insights, identify performance patterns, and provide **data-driven recommendations** to improve profitability and operational efficiency.  
+**Technical Stack:** Python, Pandas, NumPy, Matplotlib, Seaborn
 
----
-
-## 📁 Dataset Information  
-- **File**: `EuroMart_Stores.csv`  
-- **Records**: 8,047 transactions  
-- **Time Period**: 2011–2014  
-- **Features**: 18 columns covering customer details, product attributes, financial metrics, and geography  
+**Analysis Features:**
+- Data cleaning & missing value treatment
+- Feature engineering (Car_Age, Brand, Model extraction)
+- Comprehensive statistical analysis
+- Outlier detection and market trend identification
 
 ---
 
-## 🛠️ Data Processing & Feature Engineering  
+### [EuroMart Sales Analysis](Euro_mart_sales_Analysis/)
+**Description:** Comprehensive analysis of EuroMart's sales data (2011-2014) to uncover business insights and provide data-driven recommendations.
 
-### 🔹 Data Cleaning  
-- Removed unnecessary `Unnamed: 0` column  
-- Verified no missing values or duplicates  
-- Converted discount percentages from decimal → integer format  
+**Key Insights:**
+- **Primary Market:** France (1,916 orders)
+- **Key Region:** Central Europe (55% of orders)
+- **Peak Month:** August (1,132 orders)
+- **Strongest Quarter:** Q4 (51% of annual sales)
+- **Segment Focus:** Consumer (52% of orders)
 
-### 🔹 Feature Engineering  
-- **Temporal Features**: Year, Month, Quarter, Season extracted from Order Date  
-- **Financial Metrics**:  
-  - `Total Sales = Sales × Quantity`  
-  - `Total Profit = Profit × Quantity`  
-  - `Discount Amount = Total Sales × Discount %`  
-  - `Net Sales = Total Sales − Discount Amount`  
-  - `Net Profit = Total Profit − Discount Amount`  
+**Business Findings:**
+- Unstable profitability with wide fluctuations
+- Discount volatility (0-85% range)
+- Office Supplies category dominance (66% of orders)
+- Economy shipping preference (60%)
 
----
+**Technical Implementation:** Pandas, NumPy, Matplotlib, Seaborn for temporal trend analysis and profitability assessment
 
-## 📈 Key Business Insights  
+## 🛠️ Technical Skills
 
-### 🚩 Red Flags  
-1. **Unstable Profitability** – Wide fluctuations across all financial metrics  
-2. **Discount Volatility** – 50% of orders without discounts vs. some at 85%  
-3. **Unprofitable Orders** – Negative profits lowering overall margins  
+- **Data Cleaning:** Missing value treatment, outlier detection, data validation
+- **Feature Engineering:** Temporal features, financial metrics, categorical encoding
+- **Statistical Analysis:** Descriptive statistics, correlation analysis, trend identification
+- **Data Visualization:** Matplotlib, Seaborn, comprehensive plotting
+- **Business Insights:** Market analysis, performance metrics, strategic recommendations
 
-### 📊 Performance Metrics  
-- Avg. Order Value: **$292**  
-- Avg. Profit per Order: **$35**  
-- Typical Quantity: **3 units**  
-- Avg. Discount: **11%** (range: 0–85%)  
+## 📈 Key Analysis Capabilities
 
-### 🌍 Geography  
-- Primary Market: **France** (1,916 orders)  
-- Key Region: **Central Europe** (55% of orders)  
-- Top City: **London** (219 orders)  
+✅ **Descriptive Analysis** - Comprehensive data summaries  
+✅ **Data Quality Assessment** - Missing values and outlier treatment  
+✅ **Feature Engineering** - Meaningful derived features creation  
+✅ **Temporal Analysis** - Seasonality and trend identification  
+✅ **Business Intelligence** - Actionable insights and recommendations  
+✅ **Market Understanding** - Consumer behavior and pricing patterns  
 
-### 🏢 Business Patterns  
-- Segment: **Consumer** (52% of orders)  
-- Shipping: **Economy** (60%)  
-- Category: **Office Supplies** (66%)  
+## 🚀 Getting Started
 
-### 📅 Seasonality  
-- Peak Month: **August** (1,132 orders)  
-- Strongest Quarter: **Q4** (51% of annual sales)  
-- Best Season: **Summer** (2,457 orders)  
+To explore any project:
+1. Navigate to the project folder
+2. Open the Jupyter notebook (`.ipynb` file)
+3. Run cells sequentially to reproduce the analysis
+4. Review the dataset and generated visualizations
 
-> 📸 *Sample visualizations (add screenshots here)*  
-> - ***Sales by Month***
-> - <img width="1189" height="390" alt="image" src="https://github.com/user-attachments/assets/bda6b20a-5f69-4c8f-af2e-d7a47adef63c" />
+## 📫 Contact
 
-
-> - ***Profitability Heatmap***
->   
-> - <img width="1389" height="990" alt="image" src="https://github.com/user-attachments/assets/07a2dcf4-8477-4924-8ccf-03e3536cc18f" />
-
-
-> - ***Discounts Distribution***
->   
-> - <img width="871" height="547" alt="image" src="https://github.com/user-attachments/assets/75ecf731-0227-448f-ad84-da20e6504fa7" />
-
+- **Author:** Awab Idris
+- **GitHub:** [@Pinkkygold](https://github.com/Pinkkygold)
+- **LinkedIn:** [Awab Abdalla](https://www.linkedin.com/in/awab-abdalla)
 
 ---
 
-## 🎯 Recommendations  
-
-### Immediate Actions  
-- Standardize discount strategy to reduce volatility  
-- Investigate loss-making transactions to minimize profit leaks  
-- Optimize inventory for high-performing products (e.g., *Eldon File Cart, Single Width*)  
-
-### Strategic Initiatives  
-- Build **VIP programs** for repeat customers (e.g., Joel Peters)  
-- Prioritize **Q4 & Summer** for campaigns and resource allocation  
-- Strengthen **Central Europe** market penetration  
-- Diversify beyond **Office Supplies** to reduce dependency  
-
----
-
-## 📊 Technical Implementation  
-
-### Libraries  
-- `pandas`, `numpy`, `matplotlib`, `seaborn`  
-
-### Analysis Performed  
-- Descriptive statistics  
-- Univariate analysis  
-- Temporal trend analysis  
-- Profitability assessment  
-- Customer segmentation patterns  
-
----
-
-## 🔮 Future Work  
-- Predictive sales forecasting (ARIMA, Prophet, LSTMs)  
-- Customer Lifetime Value (CLV) modeling  
-- Real-time BI dashboard integration  
-- A/B testing for discount effectiveness  
-- Classification models to flag **high-risk (loss-making) orders**  
-
----
+*⭐ If you find these analyses valuable, don't forget to star this repository!*
